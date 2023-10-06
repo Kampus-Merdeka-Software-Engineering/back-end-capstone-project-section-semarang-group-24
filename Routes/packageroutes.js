@@ -37,15 +37,4 @@ router.put("/packages/:idreceipt", async(req, res) => {
     };
 });
 
-router.delete("/packages/:idreceipt", async (req, res) => {
-    try {
-        const idreceipt = req.params.idreceipt;
-        const fetchedData = await sendpackage.findOne({where: {idreceipt: idreceipt}});
-        await fetchedData.destroy({msg: "Success Delete!"});
-        res.status(201).json();
-    } catch (error) {
-        res.send(error.message)
-    };
-});
-
 export default router;
