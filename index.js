@@ -1,5 +1,5 @@
 import express from "express";
-import cors from "cors"
+import cors from "cors";
 import PackageRouter from "./Routes/packageroutes.js";
 
 const app = express();
