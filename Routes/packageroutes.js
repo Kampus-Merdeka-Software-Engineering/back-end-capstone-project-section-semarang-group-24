@@ -21,7 +21,7 @@ router.get("/packages", async (req, res) => {
     const result = await sendpackage.sequelize.query('SELECT * FROM sendpackages_db.packages', {
         replacements: [req.params.idrecipt],
             type: QueryTypes.SELECT
-    })
+    });
     res.status(200).json({message: 'All Package Found', result: result});
     } catch (error) {
     res.send(error.message)
