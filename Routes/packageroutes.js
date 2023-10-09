@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get("/packages/:idrecipt", async(req, res) => {
     try {
-        const result = await sendpackage.sequelize.query('SELECT * FROM sendpackages_db.packages u WHERE u.idreceipt = ?', {
+        const result = await sendpackage.sequelize.query('SELECT * FROM packages u WHERE u.idreceipt = ?', {
             replacements: [req.params.idrecipt],
             type: QueryTypes.SELECT
         });
