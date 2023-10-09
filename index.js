@@ -13,4 +13,6 @@ app.use(cors());
 app.use(express.json());
 app.use(PackageRouter);
 
-app.listen(PORT, () => console.log(`app running on port ${PORT}`));
+//app.listen(PORT, () => console.log(`app running on port ${PORT}`));
+
+app.listen(PORT, "0.0.0.0", function () {});
